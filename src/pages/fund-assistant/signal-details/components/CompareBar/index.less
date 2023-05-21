@@ -1,0 +1,40 @@
+.comparebar_wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 12px;
+
+  margin-left: 30%;
+  &.same {
+    margin-left: 0;
+  }
+  .mid {
+    position: relative;
+    width: 0px;
+    height: 12px;
+  }
+
+  .comparebar {
+    position: absolute;
+
+    height: 12px;
+
+    &.minu {
+      right: 0;
+      background-color: #4ba471;
+    }
+    &.plus {
+      left: 0;
+      background-color: #e74949;
+    }
+    .value {
+      position: absolute;
+      line-height: 12px;
+      right: 0;
+      top: 0;
+      transform: translateX(110%);
+    }
+  }
+}

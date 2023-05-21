@@ -1,0 +1,40 @@
+@import '../../../style/common';
+.fund_details_section_box {
+  background: white;
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    height: 40px;
+    background: #fff;
+    justify-content: center;
+    .bottom_line(#E9EAEF);
+    .tab_wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .tab_item {
+        margin-right: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+
+        .tab_separator {
+          position: absolute;
+          width: 20px;
+          height: 2px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: 0 auto;
+          background: transparent;
+          border-radius: 1px;
+        }
+      }
+    }
+  }
+}

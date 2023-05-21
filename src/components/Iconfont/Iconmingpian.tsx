@@ -1,0 +1,33 @@
+/* tslint:disable */
+/* eslint-disable */
+
+import { CSSProperties, SVGAttributes, FunctionComponent } from 'react'
+import { getIconColor } from './helper'
+
+interface Props extends Omit<SVGAttributes<SVGElement>, 'color'> {
+  size?: number
+  color?: string | string[]
+}
+
+const DEFAULT_STYLE: CSSProperties = {
+  display: 'block'
+}
+
+const Iconmingpian: FunctionComponent<Props> = ({ size, color, style: _style, ...rest }) => {
+  const style = _style ? { ...DEFAULT_STYLE, ..._style } : DEFAULT_STYLE
+
+  return (
+    <svg viewBox="0 0 1024 1024" width={size + 'px'} height={size + 'px'} style={style} {...rest}>
+      <path
+        d="M113.770667 128h796.458666C937.706667 128 960 147.093333 960 170.666667v682.666666c0 23.573333-22.293333 42.666667-49.770667 42.666667H113.770667C86.293333 896 64 876.906667 64 853.333333V170.666667c0-23.573333 22.293333-42.666667 49.770667-42.666667zM149.333333 213.333333v597.333334h725.333334V213.333333H149.333333z m85.333334 256h149.333333a21.333333 21.333333 0 0 1 21.333333 21.333334v42.666666a21.333333 21.333333 0 0 1-21.333333 21.333334h-149.333333a21.333333 21.333333 0 0 1-21.333334-21.333334v-42.666666a21.333333 21.333333 0 0 1 21.333334-21.333334z m0 170.666667h298.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H234.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333z m362.666666-362.666667h192a21.333333 21.333333 0 0 1 21.333334 21.333334v234.666666a21.333333 21.333333 0 0 1-21.333334 21.333334h-192a21.333333 21.333333 0 0 1-21.333333-21.333334V298.666667a21.333333 21.333333 0 0 1 21.333333-21.333334z m64 85.333334v106.666666h64v-106.666666h-64z"
+        fill={getIconColor(color, 0, '#333333')}
+      />
+    </svg>
+  )
+}
+
+Iconmingpian.defaultProps = {
+  size: 18
+}
+
+export default Iconmingpian

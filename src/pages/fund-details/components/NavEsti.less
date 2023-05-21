@@ -1,0 +1,237 @@
+.nav_esti_box {
+  display: flex;
+  margin-top: 16px;
+  flex-direction: column;
+
+  .tips {
+    margin-left: 16px;
+    margin-top: 0.24rem;
+    font-size: 0.22rem;
+    font-family: PingFangSC-Regular, serif;
+    font-weight: normal;
+    color: #9aa0b1;
+  }
+  .nav_esti_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    .list_item_nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .value {
+        font-size: 13px;
+        font-family: DIN-Medium, DIN;
+        font-weight: 500;
+        color: #121d3a;
+      }
+      .label {
+        margin-top: 4px;
+        font-size: 11px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #545968;
+      }
+    }
+  }
+}
+
+.send_barrage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 20px;
+  background: white;
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+  }
+  .textarea_input {
+    display: flex;
+    border-radius: 20px;
+    background: #f5f6f8;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 12px;
+    flex: 1;
+    .textarea {
+      flex: 1;
+      height: 32px;
+      position: relative;
+      padding-left: 16px;
+    }
+    .limit {
+      font-size: 11px;
+      font-family: PingFangSC-Regular, PingFang SC, serif;
+      font-weight: 400;
+      color: #9aa1b2;
+    }
+  }
+  .send_btn {
+    font-size: 14px;
+    width: 40px;
+    margin-left: 10px;
+    text-align: center;
+    font-family: PingFangSC-Medium, PingFang SC, serif;
+    font-weight: 500;
+    color: #9aa1b2;
+  }
+}
+
+.edit_color_wrap {
+  width: 100vw;
+  height: 206px;
+  padding: 16px 16px;
+  background: #f5f6f8;
+  .title {
+    font-size: 12px;
+    font-family: PingFangSC-Medium, PingFang SC, serif;
+    font-weight: 500;
+    color: #9aa1b2;
+  }
+  .color_list {
+    margin-top: 12px;
+    margin-left: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .color_wrap {
+      display: flex;
+      flex-direction: column;
+      margin-right: 35px;
+      align-items: center;
+      .color_items {
+        width: 30px;
+        height: 26px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-width: 1px;
+        border-style: solid;
+
+        .inner {
+          width: 24px;
+          height: 20px;
+          border-radius: 2px;
+        }
+      }
+      .txt {
+        margin-top: 3px;
+        font-size: 12px;
+        font-family: PingFangSC-Regular, PingFang SC, serif;
+        font-weight: 400;
+        color: #e74949;
+      }
+    }
+  }
+}
+.bullet-wrapper {
+  padding: 4px 12px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 11px !important;
+  position: relative;
+  background: #f5f6f8 !important;
+  box-shadow: none !important;
+  word-break: keep-all;
+  white-space: pre-wrap;
+}
+.bullet-msg {
+  font-size: 11px !important;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+}
+.small_screen {
+  #EstiBaseAreaChart {
+    width: 100% !important;
+  }
+}
+.effect_flash {
+  .point {
+    width: 10px;
+    height: 10px;
+    background-color: #e74949;
+    position: relative;
+    border-radius: 50%;
+  }
+
+  .point-g {
+    width: 10px;
+    height: 10px;
+    background-color: #4ba471;
+    position: relative;
+    border-radius: 50%;
+  }
+  /* 设置动画前颜色 */
+  .point-g-flicker:after {
+    background-color: #4ba471;
+  }
+  /* 设置动画前颜色 */
+  .point-flicker:after {
+    background-color: #e74949;
+  }
+
+  /* 设置动画后颜色 */
+  .point-flicker:before {
+    background-color: rgba(231, 73, 73, 0.2);
+  }
+  .point-g-flicker:before {
+    background-color: rgba(75, 164, 113, 0.2);
+  }
+
+  /* 设置动画 */
+  .point-flicker:before,
+  .point-flicker:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border-radius: 50%;
+    /* CSS3 animation 属性 网址 */
+    /* https://www.w3school.com.cn/cssref/pr_animation.asp */
+    animation: warn 3s ease-out 0s infinite;
+  }
+
+  .point-g-flicker:before,
+  .point-g-flicker:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border-radius: 50%;
+    /* CSS3 animation 属性 网址 */
+    /* https://www.w3school.com.cn/cssref/pr_animation.asp */
+    animation: warn 3s ease-out 0s infinite;
+  }
+
+  /* @keyframes 规则用于创建动画。在 @keyframes 中规定某项 CSS 样式，就能创建由当前样式逐渐改为新样式的动画效果。 */
+  @keyframes warn {
+    0% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+
+    30% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+    }
+  }
+}

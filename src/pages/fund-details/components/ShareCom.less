@@ -1,0 +1,47 @@
+@import '../../../style/common';
+.fixed__gesture_guide {
+  position: fixed;
+  top: 0;
+  z-index: 8888;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 31, 32, 0.8);
+  .gesture_wrap {
+    position: fixed;
+    right: 20px;
+    top: 17px;
+    .gesture_column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .gesture_img {
+        margin-right: 46px;
+        width: 52px;
+        height: 56px;
+      }
+      .gesture_center {
+        margin-top: 12px;
+        font-size: 16px;
+        font-family: PingFangSC-Medium;
+        font-weight: normal;
+        color: #ffffff;
+        .share_dot {
+          width: 28.5px;
+        }
+      }
+      .btn_wrap {
+        margin-top: 16px;
+        margin-right: 61px;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        font-family: PingFangSC-Regular;
+        font-weight: normal;
+        color: #ffffff;
+        .all(#fff,6px);
+      }
+    }
+  }
+}

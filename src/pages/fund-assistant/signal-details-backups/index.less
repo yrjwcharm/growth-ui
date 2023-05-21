@@ -1,0 +1,181 @@
+.signal-details {
+  width: 100%;
+  height: 100%;
+  // background: #F5F6F8;
+  background: #fff;
+  overflow-y: auto;
+  .product-card {
+    width: 100%;
+    padding: 0.32rem 0.3rem;
+    background-color: #fff;
+    .product-card-title {
+      display: flex;
+      align-items: flex-end;
+      .product-name {
+        font-size: 0.32rem;
+        font-weight: 500;
+        color: #121d3a;
+        line-height: 0.45rem;
+      }
+      .product-code {
+        font-size: 0.26rem;
+        font-weight: normal;
+        color: #9aa0b1;
+        line-height: 0.36rem;
+        margin-left: 0.08rem;
+      }
+    }
+    .product-tag-container {
+      display: flex;
+      margin-top: 0.16rem;
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.04rem 0.14rem;
+        border-radius: 0.04rem;
+        border: 0.01rem solid #bdc2cc;
+        margin-right: 0.16rem;
+        font-size: 0.22rem;
+        font-weight: normal;
+        color: #545968;
+        line-height: 0.3rem;
+      }
+    }
+  }
+  .level-container {
+    width: 100%;
+    padding: 0 0.3rem 0.4rem;
+    background-color: #fff;
+    .valuation {
+      display: flex;
+      align-items: center;
+      font-size: 0.28rem;
+      font-weight: 500;
+      color: #121d3a;
+      line-height: 0.39rem;
+    }
+    .level-bar-container {
+      display: flex;
+      margin-top: 0.2rem;
+      align-items: center;
+      justify-content: space-between;
+      .level-bar {
+        width: 100%;
+        height: 0.16rem;
+        background-color: #e9eaef;
+      }
+      .level-text {
+        font-size: 0.24rem;
+        font-weight: normal;
+        color: #9aa0b1;
+        line-height: 0.34rem;
+        margin-top: 0.16rem;
+      }
+    }
+  }
+  .describe-container {
+    width: 100%;
+    padding: 0 0.3rem 0.4rem;
+    background-color: #fff;
+    > div {
+      border-radius: 0.12rem;
+      padding: 0.32rem;
+      box-shadow: 0px 8px 20px 0px rgba(170, 170, 170, 0.102);
+      border-width: 0.04rem 0.02rem 0.02rem 0.02rem;
+      border-style: solid;
+      .describe-title {
+        width: 100%;
+        font-size: 0.4rem;
+        font-weight: 500;
+        line-height: 0.56rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .describe-sub-title {
+        font-size: 0.24rem;
+        font-weight: 500;
+        color: #121d3a;
+        line-height: 0.34rem;
+        margin-bottom: 0.24rem;
+        margin-top: 0.04rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .describe-content {
+        display: flex;
+        .describe {
+          font-size: 0.24rem;
+          font-weight: normal;
+          color: #545968;
+          line-height: 0.34rem;
+        }
+      }
+    }
+  }
+  .card-container {
+    padding: 0 0.3rem 0.4rem;
+    background-color: #fff;
+    .content-card {
+      .card-title {
+        display: flex;
+        align-items: center;
+        font-size: 0.28rem;
+        font-weight: 500;
+        color: #121d3a;
+        line-height: 0.39rem;
+      }
+    }
+    .more {
+      padding: 0.24rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.24rem;
+      font-weight: normal;
+      color: #0051cc;
+      line-height: 0.34rem;
+    }
+  }
+  .chart-container {
+    margin-top: 0.32rem;
+    .chart-lengend {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .lengend-value {
+        font-weight: bold;
+        font-size: 0.32rem;
+        font-family: din-bold;
+        color: #51565d;
+        line-height: 0.38rem;
+      }
+      .lengend-key {
+        font-size: 0.22rem;
+        font-weight: 400;
+        color: #8f959e;
+      }
+    }
+    .chart-tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0.2rem;
+      .chart-tab-tag {
+        width: 0.2rem;
+        height: 0.2rem;
+        // opacity: 0.15;
+      }
+      .chart-tab-text {
+        font-size: 0.22rem;
+        font-weight: normal;
+        color: #545968;
+        line-height: 0.3rem;
+        margin-top: 0.08rem;
+      }
+    }
+  }
+}

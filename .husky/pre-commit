@@ -1,0 +1,11 @@
+###
+ # @Date: 2023-02-17 10:39:56
+ # @LastEditors: lizhengfeng lizhengfeng@licaimofang.com
+ # @LastEditTime: 2023-02-17 10:54:48
+ # @FilePath: /growth-ui/.husky/pre-commit
+ # @Description:  提交前 检测代码格式
+### 
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run format

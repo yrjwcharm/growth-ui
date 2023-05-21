@@ -1,0 +1,174 @@
+.all(@border-color:#E9EAEF,@border-radius:5px) {
+  position: relative;
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: left top;
+    box-sizing: border-box;
+    border: 1px solid @border-color;
+    border-radius: @border-radius*2;
+  }
+}
+.diagnostic-report {
+  width: 100%;
+  height: 100%;
+  background: #f5f6f8;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .privilege_flex {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .privilege_item {
+      display: flex;
+      width: 49px;
+      flex-direction: column;
+      align-items: center;
+      .img_card {
+        width: 32px;
+        height: 32px;
+      }
+      .explain {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 11px;
+        //font-family: PingFang SC-常规体, PingFang SC;
+        font-family: PingFangSC-Regular;
+        font-weight: normal;
+        color: #545968;
+      }
+    }
+  }
+  .content-container {
+    background-color: transparent;
+    padding: 0 0.32rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    font-size: 0;
+    .product-card {
+      width: 100%;
+      padding: 0.32rem;
+      background-color: #fff;
+      border-radius: 0.12rem;
+      border-bottom: 0.02rem dashed #bdc2cc;
+      .product_wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .focus {
+          width: 64px;
+          height: 30px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          .all(#0051cc,103px);
+          .focus_txt {
+            font-size: 12px;
+            //font-family: PingFang SC-常规体, PingFang SC;
+            font-family: PingFangSC-Regular;
+            font-weight: normal;
+            color: #0051cc;
+          }
+        }
+        .product_top {
+          .product-card-title {
+            display: flex;
+            align-items: center;
+
+            .product-name {
+              width: 180px;
+              font-size: 0.32rem;
+              font-weight: 500;
+              color: #121d3a;
+              line-height: 0.44rem;
+            }
+
+            .product-code {
+              font-size: 0.24rem;
+              font-family: 'din-bold';
+              font-weight: bold;
+              color: #545968;
+              line-height: 0.28rem;
+              margin-left: 0.12rem;
+            }
+          }
+
+          .product-tag-container {
+            display: flex;
+            margin-top: 0.16rem;
+
+            > div {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0.04rem 0.14rem;
+              border-radius: 0.04rem;
+              border: 0.01rem solid #bdc2cc;
+              margin-right: 0.16rem;
+              font-size: 0.22rem;
+              font-weight: normal;
+              color: #545968;
+              line-height: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+    .card-container {
+      padding: 0.4rem 0.32rem;
+      border-radius: 0.12rem;
+      margin-bottom: 0.24rem;
+      .card-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > img {
+          height: 0.7rem;
+        }
+      }
+      .sub-card-container {
+        margin-top: 0.16rem;
+      }
+    }
+  }
+  .manager-info-container {
+    display: flex;
+    align-items: center;
+    margin-top: 0.4rem;
+    .manager-info {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      > img {
+        width: 0.88rem;
+        height: 0.88rem;
+        border-radius: 50%;
+      }
+      > span {
+        font-size: 0.32rem;
+        font-weight: bold;
+        color: #121d3a;
+        line-height: 0.38rem;
+        margin-left: 0.18rem;
+      }
+    }
+    .manager-popularity {
+      flex: 1;
+      font-size: 0.26rem;
+      font-weight: bold;
+      color: #121d3a;
+      line-height: 0.36rem;
+    }
+  }
+}

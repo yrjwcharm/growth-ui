@@ -1,0 +1,58 @@
+{
+  "name": "growth-ui",
+  "description": "基金理财助手小程序 - h5",
+  "private": true,
+  "scripts": {
+    "build": "cross-env REACT_APP_ENV=production vite build",
+    "build:pre": "cross-env REACT_APP_ENV=pre1 vite build",
+    "build:test": "cross-env REACT_APP_ENV=testing vite build",
+    "dev": "cross-env REACT_APP_ENV=testing vite",
+    "format": "npx lint-staged",
+    "icon": "npx iconfont-h5",
+    "postinstall": "husky install",
+    "preview": "cross-env REACT_APP_ENV=production vite preview",
+    "start": "npm run dev"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@antv/f2": "^3.8.9",
+    "@nutui/nutui-react": "^1.4.11",
+    "antd-mobile": "^5.28.0",
+    "antd-mobile-icons": "^0.3.0",
+    "antd-mobile-v2": "^2.3.4",
+    "axios": "^1.3.2",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.7",
+    "echarts": "^5.3.3",
+    "lodash": "^4.17.21",
+    "qs": "^6.11.0",
+    "rc-bullets-ts": "^1.0.7",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "react-router": "^6.9.0",
+    "react-router-dom": "^6.8.1"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.3.34",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "husky": "^8.0.3",
+    "less": "^4.1.3",
+    "lint-staged": "^13.1.1",
+    "prettier": "^2.8.4",
+    "rollup-plugin-visualizer": "^5.9.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.0",
+    "vite-plugin-require": "^1.1.10",
+    "yorkie": "^2.0.0"
+  }
+}

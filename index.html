@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--修改android手机先显示地址栏链接，在显示详情标题的问题    -->
+    <title>&nbsp;&nbsp;</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <link rel="icon" href="/icon.png" />
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js" ></script>
+  </head>
+  <body>
+  <div id="calendar-container"></div>
+  <script>
+    function Calendar(month, year) {
+      this.month = month;
+      this.year = year;
+      this.today = new Date();
+    }
+
+    Calendar.prototype.generateHTML = function () {
+      const firstDay = new Date(this.year, this.month, 1);
+      const lastDay = new Date(this.year, this.month + 1, 0);
+      const startDate = new Date(firstDay);
+      startDate.setDate(startDate.getDate() - firstDay.getDay());
+      const endDate = new Date(lastDay);
+      endDate.setDate(endDate.getDate() + (6 - lastDay.getDay()));
+
+      let html = '<table>';
+      html += '<tr><th colspan="7">' + this.getMonthName() + ' ' + this.year + '</th></tr>';
+      html += '<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>';
+
+      let currentDate = new Date(startDate);
+
+      while (currentDate <= endDate) {
+        html += '<tr>';
+
+        for (let i = 0; i < 7; i++) {
+          if (currentDate.getMonth() === this.month) {
+            const classNames = [];
+            if (currentDate.toDateString() === this.today.toDateString()) {
+              classNames.push('today');
+            }
+            if (i === 0 || i === 6) {
+              classNames.push('weekend');
+            }
+            html += '<td class="' + classNames.join(' ') + '">' + currentDate.getDate() + '</td>';
+          } else {
+            html += '<td class="inactive">' + currentDate.getDate() + '</td>';
+          }
+
+          currentDate.setDate(currentDate.getDate() + 1);
+        }
+
+        html += '</tr>';
+      }
+
+      html += '</table>';
+
+      return html;
+    };
+
+    Calendar.prototype.getMonthName = function () {
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      return monthNames[this.month];
+    };
+
+    // 示例用法
+    const currentMonth = new Date().getMonth();
+    const currentYear = new Date().getFullYear();
+    const calendar = new Calendar(currentMonth, currentYear);
+    const calendarHTML = calendar.generateHTML();
+
+    // 将生成的日历 HTML 插入到页面中的某个元素中
+    document.getElementById('calendar-container').innerHTML = calendarHTML;
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+/* tslint:disable */
+/* eslint-disable */
+
+import { CSSProperties, SVGAttributes, FunctionComponent } from 'react'
+import { getIconColor } from './helper'
+
+interface Props extends Omit<SVGAttributes<SVGElement>, 'color'> {
+  size?: number
+  color?: string | string[]
+}
+
+const DEFAULT_STYLE: CSSProperties = {
+  display: 'block'
+}
+
+const Iconjiaoyimingxi: FunctionComponent<Props> = ({ size, color, style: _style, ...rest }) => {
+  const style = _style ? { ...DEFAULT_STYLE, ..._style } : DEFAULT_STYLE
+
+  return (
+    <svg viewBox="0 0 1024 1024" width={size + 'px'} height={size + 'px'} style={style} {...rest}>
+      <path
+        d="M832 85.333333a106.666667 106.666667 0 0 1 106.666667 106.666667v584.704a106.666667 106.666667 0 0 1-45.205334 87.168l-84.714666 59.733333a21.333333 21.333333 0 0 1-24.597334 0l-117.632-82.944a21.333333 21.333333 0 0 0-24.597333 0l-117.632 82.965334a21.333333 21.333333 0 0 1-24.576 0l-117.632-82.965334a21.333333 21.333333 0 0 0-24.597333 0l-117.632 82.965334a21.333333 21.333333 0 0 1-24.597334 0L130.56 863.872A106.666667 106.666667 0 0 1 85.333333 776.704V192a106.666667 106.666667 0 0 1 106.666667-106.666667h640z m0 64H192a42.666667 42.666667 0 0 0-42.56 39.466667L149.333333 192v584.704a42.666667 42.666667 0 0 0 15.36 32.768l2.709334 2.090667 60.138666 42.389333 93.056-65.578667a85.333333 85.333333 0 0 1 94.464-2.602666l3.882667 2.602666L512 853.952l93.056-65.578667a85.333333 85.333333 0 0 1 94.442667-2.602666l3.904 2.602666 93.034666 65.578667 60.16-42.389333a42.666667 42.666667 0 0 0 17.92-31.424l0.149334-3.434667V192a42.666667 42.666667 0 0 0-39.466667-42.56L832 149.333333z"
+        fill={getIconColor(color, 0, '#51565D')}
+      />
+      <path
+        d="M490.666667 256a32 32 0 0 1 3.072 63.850667L490.666667 320H256a32 32 0 0 1-3.072-63.850667L256 256h234.666667zM768 426.666667a32 32 0 0 1 3.072 63.850666L768 490.666667H256a32 32 0 0 1-3.072-63.850667L256 426.666667h512zM768 597.333333a32 32 0 0 1 3.072 63.850667L768 661.333333H256a32 32 0 0 1-3.072-63.850666L256 597.333333h512z"
+        fill={getIconColor(color, 1, '#F84949')}
+      />
+    </svg>
+  )
+}
+
+Iconjiaoyimingxi.defaultProps = {
+  size: 18
+}
+
+export default Iconjiaoyimingxi

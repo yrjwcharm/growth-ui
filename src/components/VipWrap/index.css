@@ -1,0 +1,58 @@
+
+.vipchartwrap {
+  position: relative;
+
+}
+
+.vip_lockWrap {
+  position: absolute;
+   
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.vip_lockWrap img {
+  width: 20px;
+  height: 20px;
+
+}
+
+.vip_lockWrap label {
+  color: white;
+  font-size: 14px;
+}
+ 
+.viplock_descWrap label{
+  display: block;
+  text-align: center;
+}
+
+
+
+.vip_lockWrap.vipchart_lockWrap {
+  right: 0;
+  top: 10px;
+  width: 100px;
+  height: 140px;
+  flex-direction: column;
+}
+
+
+.vip_lockWrap.vipblock_lockWrap {
+  flex-direction: row;
+  width: 100%;
+  height: calc(100% - 20px);
+  left: 0;
+  top: 0;
+}
+
+
+.vipblock_lockWrap .viplock_descWrap {
+  margin-left: 20px;
+}
+.vipchart_lockWrap .viplock_descWrap {
+  margin-top: 20px;
+}

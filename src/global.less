@@ -1,0 +1,234 @@
+@font-face {
+  font-family: 'din-bold';
+  src: url(./assets/fonts/DINAlternate-Bold.ttf);
+}
+canvas {
+  display: block;
+}
+
+body {
+  padding-bottom: constant(safe-area-inset-bottom); /* 兼容 iOS < 11.2 */
+  padding-bottom: env(safe-area-inset-bottom); /* 兼容 iOS >= 11.2 */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// @import '~video-react/styles/scss/video-react'; // or import scss
+
+ul,
+ol {
+  list-style: none;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+table,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* 取消input上的默认样式 */
+input[type='button'] {
+  -webkit-appearance: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+input {
+  background: none;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  background: #fff;
+}
+
+div {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.scroll-view {
+  height: 100% !important;
+}
+
+// antd Button
+.am-button::before {
+  border: 0 !important;
+}
+.am-button {
+  background-color: #ccad86;
+  font-size: 0.34rem;
+  color: #fff;
+}
+a:hover {
+  color: #fff;
+}
+.am-button.am-button-disabled {
+  background: #ebdece;
+  font-size: 0.34rem;
+  color: #fff;
+}
+.am-button.am-button-active {
+  background-color: #c19967;
+}
+
+// antd Button(线)
+#antd-button-line .am-button {
+  border: 0.02rem solid #ccad86 !important;
+}
+#antd-button-line .am-button {
+  background-color: #fff;
+  font-size: 0.34rem;
+  color: #ccad86;
+}
+#antd-button-line .am-button.am-button-disabled {
+  background: #fff;
+  font-size: 0.34rem;
+  color: #ebdece;
+  border: 0.02rem solid #ebdece;
+}
+#antd-button-line .am-button.am-button-active {
+  background-color: #f5eee7;
+}
+
+// antd ta
+.custom-profile {
+  .ant-table-thead {
+    .ant-table-cell {
+      font-size: 0.24rem;
+      font-weight: 500;
+      color: #1f2329;
+      line-height: 0.34rem;
+    }
+  }
+  .ant-table-tbody {
+    .ant-table-cell {
+      font-size: 0.24rem;
+      font-weight: 400;
+      color: #51565d;
+      line-height: 0.34rem;
+    }
+  }
+  .ant-table-small .ant-table-thead > tr > th {
+    background: #f5eee7;
+  }
+  .ant-table-container {
+    border-radius: 0.12rem;
+    overflow: hidden;
+  }
+}
+
+.scroll-view-up {
+  background-color: rgb(248, 249, 250);
+}
+
+.am-tabs-default-bar-underline {
+  border: 1px #f54a45 solid;
+}
+.am-tab-bar-item {
+  height: 100%;
+  width: 100%;
+}
+
+.upload-tb-header,
+.upload-up-bg {
+  background-color: #f1f4fc !important;
+}
+
+// 被选中的表格行的样式
+.clickRowStyl {
+  background-color: #40a9ff;
+  color: #fff !important;
+}
+.ant-table-tbody > .clickRowStyl:hover > td {
+  background-color: #40a9ff;
+  color: #fff;
+}
+
+.ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+  color: #40a9ff !important;
+}
+.ant-table-body .ant-table-row-hover {
+  color: #40a9ff !important;
+}
+.ant-table-body .ant-table-row-hover > td {
+  color: #40a9ff !important;
+}
+.bottom_line(@color:#E9EAEF,@style:solid) {
+  position: relative;
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    content: '';
+    border-top: 1px @style @color;
+    -webkit-transform: scale(0.5);
+    transform: scaleY(0.5);
+  }
+}
